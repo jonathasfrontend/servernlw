@@ -2,8 +2,8 @@
     "version":2,
     "builds":[
          {
-                "src":"./src/server.ts",
-                "use":"@vercel/typescript"
+                "src":"./build/utils/server.js",
+                "use":"@vercel/node"
          }
     ],
 
