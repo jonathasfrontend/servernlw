@@ -19,8 +19,10 @@ const convert_hour_string_to_minutes_1 = require("./utils/convert-hour-string-to
 const convert_minutes_to_hour_string_1 = require("./utils/convert-minutes-to-hour-string");
 const app = (0, express_1.default)();
 const prisma = new client_1.PrismaClient();
+
 app.use(express_1.default.json());
 app.use((0, cors_1.default)());
+
 app.get("/games", (request, response) => __awaiter(void 0, void 0, void 0, function* () {
     const games = yield prisma.game.findMany({
         include: {
